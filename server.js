@@ -2,7 +2,7 @@ const express=require('express');
 
 const app=new express();
 
-app.get('/',(req,res)=>{
+app.get('/1',(req,res)=>{
     res.send('Mern dev connector home page.');
 })
 
