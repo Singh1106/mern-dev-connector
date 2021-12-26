@@ -17,13 +17,6 @@ connectDB();
 // init bodyparser middleware
 app.use(express.json());
 
-// defining to allow cors
-app.use(
-  cors({
-    origin: 'http://localhost:3000',
-  })
-);
-
 // not suited for production
 // app.get('/', (req, res) => {
 //   res.send('Mern dev connector home page.');
@@ -44,7 +37,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
   console.log(`Listening at port: ${port}`);
